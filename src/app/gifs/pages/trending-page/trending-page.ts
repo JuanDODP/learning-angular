@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { GifList } from "../../components/gif-list/gif-list";
+import { GifsService } from '../../services/gifs.service';
 const imageUrls: string[] = [
   "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
   "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
@@ -21,5 +22,9 @@ const imageUrls: string[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class TrendingPage {
-  imageUrls = imageUrls;
+  gifService = inject(GifsService);
+  // imageUrls = computed(() => this.gifService.trendingGifs());
+
+
+
 }
