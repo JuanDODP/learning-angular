@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { environment } from '@environments/environment';
+import { AppEnvironment, environment } from '@environments/environment';
+
 
 @Component({
   selector: 'gifs-side-menu-header',
@@ -8,6 +9,5 @@ import { environment } from '@environments/environment';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideMenuHeader {
-  envs=environment
-
+  envs: AppEnvironment = environment
 }

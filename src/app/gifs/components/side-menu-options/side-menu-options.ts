@@ -14,7 +14,7 @@ interface MenuOptions {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideMenuOptions {
-  menuOptions:MenuOptions[] = [
+  menuOptions: MenuOptions[] = [
     {
       label: 'Trending',
       sublabel: 'Popular Gifs',
@@ -28,4 +28,4 @@ export class SideMenuOptions {
       icon: 'fa-solid fa-magnifying-glass'
     }
   ];
- }
+}

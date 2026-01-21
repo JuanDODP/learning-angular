@@ -1,8 +1,13 @@
-export const environment = {
-  production:true,
-  companyName: 'Gift App',
+export interface AppEnvironment {
+  production: boolean;
+  companyName: string;
+  companyName2: string;
+  companySlogan: string;
+}
+
+export const environment: AppEnvironment = {
+  production: false,
+  companyName: 'Gif',
   companyName2: 'App',
-  companySlogan: 'Tus gifts favoritos',
-
-
+  companySlogan: 'Busca y explora los mejores gifs',
 };
