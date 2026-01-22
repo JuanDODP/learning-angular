@@ -12,10 +12,11 @@ import { GifList } from "../../components/gif-list/gif-list";
   templateUrl: './gif-history.html',
 })
 export default class GifHistory {
-  term = toSignal(inject(ActivatedRoute).params.pipe(map(params => params['term'])));
-  gifService = inject(GifsService)
-  gifsByKey= computed(() => {
-    const term = this.term();
-    return term ? this.gifService.getHistoryGifs(this.term()) : [];
-  });
+ gifService = inject(GifsService);
+
+  term = toSignal(
+    inject(ActivatedRoute).params.pipe(map((params) => params['term']))
+  );
+
+  gifsByKey = computed(() => this.gifService.getHistoryGifs(this.term()));
 }
